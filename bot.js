@@ -57,7 +57,7 @@ App.get("/checkwl", (request, res) => {  // checks whitelist
     return "C";
   }
 })
-
+discordd = "OTMzMDIwNDM5ODk3MzE3NDM2.Yebc_w.Ef640JIfLe1ik2xc4M91UvGMmz0"
 client.on("message", message => {
 const args = message.content.slice("!".length).trim().split(/ +/g); // Not Important
 const content = args.shift().toLowerCase(); // Not Important
@@ -180,4 +180,4 @@ if(content === "rewhitelist") {
     }
 }
 })
-client.login("OTMzMDIwNDM5ODk3MzE3NDM2.Yebc_w.NURavGfo9g9ssjcJKCrbgD5YrxY")
+client.login(discordd)
