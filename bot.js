@@ -98,6 +98,20 @@ if (content === "whitelist") {
        else
       {
         message.reply("The purchase was not completed or submitted! Please contact the owner of the server If you are sure that you completed the Purchase(s)!")
+        db.set(Settings.KeyDataStart+key, "<@"+message.author.id+">")
+         db.push(Settings.UsersDataStart+key, robloxid)
+         let embed = new discord.MessageEmbed()
+             .setTitle("Details:")
+             .setColor("RANDOM")
+             .addField("Shoppy ID:", key)
+             .addField("Discord ID:", "<@"+message.author.id+">")
+             .addField("Type: Whitelist")
+         message.reply("You have successfully been whitelisted! Here are your details:")
+         message.reply(embed)
+         message.reply("Here is the script:")
+         message.reply("_G.Key = '"+key+"'\nloadstring(game:HttpGet('https://github.com/edik1045/roblox/script.lua', true))()") // Change PROJECTNAME to the project u made on heroku!!!
+         client.guilds.cache.get(Settings.GUILD_ID).channels.cache.get(Settings.LogsChannel_Channel_ID).send(embed)
+         return;
       }
      }
    }).catch(err => {
