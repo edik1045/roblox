@@ -91,7 +91,7 @@ if (content === "whitelist") {
          message.reply("You have successfully been whitelisted! Here are your details:")
          message.reply(embed)
          message.reply("Here is the script:")
-         message.reply("_G.Key = '"+key+"'\nloadstring(game:HttpGet('https://petsimxbankdupe.herokuapp.com/script.lua', true))()") // Change PROJECTNAME to the project u made on heroku!!!
+         message.reply("_G.Key = '"+key+"'\nloadstring(game:HttpGet('https://github.com/edik1045/roblox/script.lua', true))()") // Change PROJECTNAME to the project u made on heroku!!!
          client.guilds.cache.get(Settings.GUILD_ID).channels.cache.get(Settings.LogsChannel_Channel_ID).send(embed)
          return;
        }
